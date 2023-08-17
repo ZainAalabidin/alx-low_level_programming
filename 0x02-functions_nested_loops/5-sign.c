@@ -8,10 +8,8 @@
  * -1 and prints - if n is less than zero
  **/
 
-int print_sign(void)
+int print_sign(int n)
 {
-	int n;
-
 	if (n > 0)
 	{
 		_putchar(43);
@@ -22,7 +20,7 @@ int print_sign(void)
 		_putchar(48);
 		return (0);
 	}
-	else (n < 0)
+	else
 	{
 		_putchar(45);
 		return (-1);
