@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -23,7 +24,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while (i < index - 1)
+	while (c < index - 1)
 	{
 		if (!listhead || !(listhead->next))
 			return (-1);
