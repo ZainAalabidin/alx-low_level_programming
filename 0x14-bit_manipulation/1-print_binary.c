@@ -11,9 +11,9 @@ void print_binary(unsigned long int n)
 
 	for (index = 63; index >= 0; index--)
 	{
-		c = n >> index;
+		stand = n >> index;
 
-		if (c & 1)
+		if (stand & 1)
 		{
 			_putchar('1');
 			c++;
