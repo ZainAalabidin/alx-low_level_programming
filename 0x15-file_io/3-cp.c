@@ -19,7 +19,8 @@ char *buffer(char *file)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -65,11 +66,11 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+
 	buff = buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buff, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	w = write(to, buffer, r);
 
 	do {
 		if (from == -1 || r == -1)
@@ -79,7 +80,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		w = write(to, buffer, r);
+		w = write(to, buff, r);
 		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
