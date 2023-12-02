@@ -93,8 +93,8 @@ int main(int argc, char *argv[])
 	} while (readd > 0);
 
 	free(buff);
-	close_file(f_1);
-	close_file(f_2);
+	close_f(f_1);
+	close_f(f_2);
 
 	return (0);
 }
