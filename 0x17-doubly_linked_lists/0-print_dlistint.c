@@ -3,7 +3,7 @@
  * print_dlistint - function that prints all the elemts of a doubly linked list
  * @h: poiner to the head of the list
  *
- * Return: return 0
+ * Return: return number of element
  */
 
 size_t print_dlistint(const dlistint_t *h)
