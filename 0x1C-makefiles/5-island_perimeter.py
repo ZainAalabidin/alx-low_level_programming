@@ -2,7 +2,7 @@ def island_perimeter(grid):
     """return the perimeter of island"""
     count = 0
     length = len(grid) - 1
-    width = len(grid[0]) - 1 
+    width = len(grid[0]) - 1
 
     for i, x in enumerate(grid):
         for j, y in enumerate(x):
