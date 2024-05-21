@@ -5,13 +5,13 @@
  * of integers using the Linear search algorithm
  *
  * @array: a pointer to the first element of the array to search in
- * @size: is the number of elements in arrayt
+ * @size: is the number of elements in array
  * @value: is the value to search for
  * Return: index of number if found or -1
  */
 int linear_search(int *array, size_t size, int value)
 {
-	int i = 0;
+	int i;
 
 	if (array == NULL)
 		return (-1);
@@ -22,7 +22,7 @@ int linear_search(int *array, size_t size, int value)
 		if (value == array[i])
 		{
 			return (i);
-		};
+		}
 	}
 	return (-1);
 }
